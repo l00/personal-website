@@ -1,12 +1,14 @@
 body {
     background-color: #00032c;
     color: #ebebeb;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 p {
     font-family: "Inter", sans-serif;
 }
 h2 {
-    font-size: 1.2em;
     font-family: monospace;
 }
 #title-text {
@@ -15,9 +17,9 @@ h2 {
     font-size: 2.5em;
 }
 #container {
+    width: 100%;
     max-width: 720px;
-    margin: 0 auto;
-    padding: 0 24px;
+    padding: 24px 24px;
 }
 .social-button {
     background-color: transparent;
