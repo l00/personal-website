@@ -1,1 +1,46 @@
-<h1>coming soon</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sake</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="clipboard.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="info">
+        <span id="title-text"></span><span id="cursor">|</span>
+        <script>
+            let i = 0;
+            const txt = 'sake';
+            const speed = 300;
+
+            function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("title-text").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+                document.getElementById("title-text").style.setProperty('--cursor', 'none');
+            }
+            }
+        typeWriter();
+        </script>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quasi assumenda magnam dolore soluta eligendi cumque molestiae fuga amet, placeat ipsa hic officiis maxime sed? Cupiditate neque iure dolor ad?</p>
+        <h2>projects</h2>
+        <a class="social-button" href="https://github.com/l00">github</a>
+        <h2>contact</h2>
+        <p>discord</p>
+        <a class="social-button" href="https://discord.com/users/521000638516166657">open</a>
+        <button class="social-button" onclick="copyText('sakess'); showToast()">copy</button>
+        <p>signal</p>
+        <a class="social-button" href="https://signal.me/#eu/TMbDv60ALB8E88iavp0TDsNwtgavR7SceV-ZvvK7Iyya0jHaaTpMnLKnHLFqElDg">open</a>
+        <button class="social-button" onclick="copyText('sake.99'); showToast()">copy</button>
+        <p>email: <strong>sake [at] sake [dot] software</strong></p>
+    </div>
+    <div id="clipboard-toast">copied to clipboard</div>
+</body>
+</html>
